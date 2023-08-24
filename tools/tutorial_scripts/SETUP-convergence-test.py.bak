@@ -1,4 +1,4 @@
-#!/usr3/graduate/nzr/miniconda3/bin/python
+#!/usr/bin/python2
 # -*- coding: utf-8 -*-
 #
 ################################################################################
@@ -18,9 +18,9 @@ min_rgkm = 4 ; max_rgkm = 4
 narg     = len(sys.argv)-1
 
 if (narg<4):
-    print("\nIncorrect number of arguments. **Usage**:\n\n", end=' ')
-    print("SETUP-convergence-test.py ", end=' ')
-    print("NGRIDK_min NGRIDK_max RGKMAX_min RGKMAX_max [DIRECTORYNAME]\n")
+    print "\nIncorrect number of arguments. **Usage**:\n\n",
+    print "SETUP-convergence-test.py ",
+    print "NGRIDK_min NGRIDK_max RGKMAX_min RGKMAX_max [DIRECTORYNAME]\n"
     sys.exit()
 
 min_ngk  = int(sys.argv[1]) ; max_ngk  = int(sys.argv[2])+1
@@ -89,7 +89,7 @@ for ngk in range(min_ngk, max_ngk, 2):    # sweeping in variables ngk and rgkm
         fileobj2.write(ET.tostring(root,
                                    pretty_print=True,
                                    xml_declaration=False,
-                                   encoding='unicode'))
+                                   encoding='UTF-8'))
                # The line above assigns the modified variable (groundstate) 
                # to the field groundstate
                # of the input.xml file. ET.tostring means element tree 
