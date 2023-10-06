@@ -405,7 +405,7 @@ module m_putgetexcitons
         call hdf5_read(fhdf5,group,"hamsize",hamsize_)
         call hdf5_read(fhdf5,group,"iq", iq_)
         call hdf5_read(fhdf5,group,"vqlmt(iq)", vqlmt_(1), (/3/))
-        call hdf5_read(fhdf5,group,"ngridk", ngridk_(1), size(ngridk_))
+        call hdf5_read(fhdf5,group,"ngridk", ngridk_(1), shape(ngridk_))
         call hdf5_read(fhdf5,group,"nexcstored",nexcstored_)
         call hdf5_read(fhdf5,group,"i1",iex1_)
         call hdf5_read(fhdf5,group,"i2",iex2_)
